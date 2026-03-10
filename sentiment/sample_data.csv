@@ -1,0 +1,21 @@
+text,label,category
+"This coffee has a wonderful bitter edge with notes of dark chocolate",positive,coffee
+"Rich and smooth, exactly the bold flavor I was looking for",positive,coffee
+"Too acidic for my taste, left an unpleasant aftertaste",negative,coffee
+"The aroma is incredible but the taste is a bit flat",neutral,coffee
+"Perfect morning brew, well balanced and aromatic",positive,coffee
+"Burnt and harsh, tastes like it was over-roasted",negative,coffee
+"Decent everyday coffee, nothing special but drinkable",neutral,coffee
+"The chocolate bar was way too bitter, almost inedible",negative,chocolate
+"Creamy and sweet with a lovely smooth texture",positive,chocolate
+"Tastes artificial and waxy, not real chocolate",negative,chocolate
+"Nice crunch from the hazelnuts, good balance of sweet and nutty",positive,chocolate
+"Bland and flavorless, expected more from a premium brand",negative,chocolate
+"Average chocolate, fine for the price point",neutral,chocolate
+"Melts in your mouth perfectly, rich cocoa flavor",positive,chocolate
+"The yogurt has a pleasant tanginess that pairs well with fruit",positive,yogurt
+"Too thick and gloopy, not the consistency I prefer",negative,yogurt
+"Mild and creamy, good base for smoothies",neutral,yogurt
+"Artificially sweet, tastes nothing like real strawberry",negative,yogurt
+"Love the probiotic benefits and it actually tastes good",positive,yogurt
+"Watery and thin, barely qualifies as yogurt",negative,yogurt
