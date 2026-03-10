@@ -110,9 +110,36 @@ Point a coding agent at `program.md`:
 
 The agent will read the code, reason about what to change, and run experiments — much smarter than random search. This is how Karpathy got his 11% improvement.
 
+## Sentiment Fine-Tuning (New)
+
+The `sentiment/` directory contains a separate autoresearch application: fine-tuning **Qwen3.5** (0.6B or 1.7B) for **domain-specific sentiment classification** using Unsloth + LoRA.
+
+This is useful for packaged goods, where sentiment is context-dependent ("bitter" = positive for coffee, negative for chocolate).
+
+### Quick Start
+
+Open `sentiment_autoresearch.ipynb` in Colab, upload your labeled dataset (CSV/JSON/JSONL with text + label columns), and run all cells.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/aigorahub/autoresearch-colab/blob/master/sentiment_autoresearch.ipynb)
+
+### How it works
+
+1. Loads your labeled data, splits into train/val
+2. Trains a LoRA adapter on Qwen3.5-0.6B-Instruct with default hyperparameters (baseline)
+3. Runs an autoresearch loop: mutates LoRA rank, learning rate, epochs, etc., keeps improvements
+4. Exports the best model to GGUF for CPU deployment via Ollama / llama.cpp
+
+See [`sentiment/README.md`](sentiment/README.md) for full documentation.
+
+| Model | GPU | VRAM | Time/Experiment |
+|-------|-----|------|-----------------|
+| Qwen3.5-0.6B | T4 | ~5 GB | ~1-2 min |
+| Qwen3.5-0.6B | A100 | ~5 GB | ~30-60 sec |
+| Qwen3.5-1.7B | A100 | ~8 GB | ~2-4 min |
+
 ## Credits
 
-All core code by [Andrej Karpathy](https://github.com/karpathy/autoresearch). This repo adds the Colab notebook and GPU configuration guide.
+All core LLM training code by [Andrej Karpathy](https://github.com/karpathy/autoresearch). Sentiment fine-tuning uses [Unsloth](https://github.com/unslothai/unsloth) for fast LoRA training. This repo adds the Colab notebooks and GPU configuration guide.
 
 ## License
 
