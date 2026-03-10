@@ -14,7 +14,7 @@ This repo packages everything to run on **Google Colab** (or any single-GPU mach
 2. Set runtime to **GPU** (Runtime → Change runtime type → GPU)
 3. Run the cells in order — the notebook handles environment setup, data download, and the experiment loop
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/aigorahub/autoresearch-colab/blob/main/autoresearch_colab.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/aigorahub/autoresearch-colab/blob/master/autoresearch_colab.ipynb)
 
 ## Quick Start (Local)
 
