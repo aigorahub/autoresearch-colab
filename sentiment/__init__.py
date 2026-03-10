@@ -1,0 +1,1 @@
+# Sentiment autoresearch package
